@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="339.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="316.0" prefWidth="599.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Line endX="87.29287719726562" endY="262.33331298828125" layoutX="98.0" layoutY="59.0" startX="-100.0" stroke="#c9c173" />
+            <Line endX="90.00003051757812" endY="276.33331298828125" layoutX="121.0" layoutY="45.0" startX="-121.00000762939453" startY="-27.040441513061523" stroke="#c9c173" />
+            <Line endX="101.29287719726562" endY="285.0" layoutX="150.0" layoutY="29.0" startX="-136.04043579101562" startY="-29.0000057220459" stroke="#c9c173" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8e3a9" height="112.0" layoutX="92.0" layoutY="113.0" stroke="#c9c173" strokeMiterLimit="8.0" strokeType="INSIDE" strokeWidth="7.0" width="439.0" />
+            <Text fill="#b7a45f" layoutX="203.0" layoutY="84.0" stroke="#4c6191" strokeWidth="0.0" text=" 尋機頭" textAlignment="CENTER" wrappingWidth="172.3018798828125">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Text>
+            <Button layoutX="171.0" layoutY="262.0" mnemonicParsing="false" text="遊戲介紹" textFill="#b7a45f">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button layoutX="333.0" layoutY="262.0" mnemonicParsing="false" text="進入遊戲" textFill="#b7a45f">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8e3a9" height="30.0" layoutY="314.0" stroke="TRANSPARENT" strokeType="INSIDE" width="623.0" />
+            <ImageView fitHeight="74.0" fitWidth="106.0" layoutX="483.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@picture/gun.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="211.0" fitWidth="236.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@picture/gunHead.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="168.0" fitWidth="195.0" layoutX="392.0" layoutY="10.0" pickOnBounds="true">
+               <image>
+                  <Image url="@picture/plane.png" />
+               </image>
+            </ImageView>
+            <Circle fill="#a8b4be" layoutX="572.0" layoutY="271.0" radius="15.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Text fill="#b39a71" layoutX="152.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="將你的飛機隱藏起來不要讓對手看到">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#b39a71" layoutX="182.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="然後輪流猜測對方的飛機位置">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
