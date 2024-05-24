@@ -43,7 +43,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="339.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="339.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.Controller.FirstPageController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="316.0" prefWidth="599.0" VBox.vgrow="ALWAYS">
       <children>
@@ -56,12 +56,7 @@
                   <Font name="System Bold" size="40.0" />
                </font>
             </Text>
-            <Button layoutX="171.0" layoutY="262.0" mnemonicParsing="false" text="遊戲介紹" textFill="#b7a45f">
-               <font>
-                  <Font name="System Bold" size="22.0" />
-               </font>
-            </Button>
-            <Button layoutX="333.0" layoutY="262.0" mnemonicParsing="false" text="進入遊戲" textFill="#b7a45f">
+            <Button fx:id="enterGame" layoutX="333.0" layoutY="262.0" mnemonicParsing="false" onAction="#goToChoosePage" text="進入遊戲" textFill="#b7a45f">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
@@ -69,17 +64,17 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8e3a9" height="30.0" layoutY="314.0" stroke="TRANSPARENT" strokeType="INSIDE" width="623.0" />
             <ImageView fitHeight="74.0" fitWidth="106.0" layoutX="483.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@picture/gun.png" />
+                  <Image url="@../picture/gun.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="211.0" fitWidth="236.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@picture/gunHead.png" />
+                  <Image url="@../picture/gunHead.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="168.0" fitWidth="195.0" layoutX="392.0" layoutY="10.0" pickOnBounds="true">
                <image>
-                  <Image url="@picture/plane.png" />
+                  <Image url="@../picture/plane.png" />
                </image>
             </ImageView>
             <Circle fill="#a8b4be" layoutX="572.0" layoutY="271.0" radius="15.0" stroke="TRANSPARENT" strokeType="INSIDE" />
@@ -93,6 +88,11 @@
                   <Font size="20.0" />
                </font>
             </Text>
+            <Button fx:id="introduction" layoutX="171.0" layoutY="262.0" mnemonicParsing="false" onAction="#goToIntroPage" text="遊戲介紹" textFill="#b7a45f">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
       </children>
     </AnchorPane>
   </children>
