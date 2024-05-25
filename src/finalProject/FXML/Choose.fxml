@@ -45,18 +45,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="336.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalProject.Controller.ChoosePageController">
   <children>
-    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="314.0" prefWidth="615.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
       <children>
             <ImageView fitHeight="163.0" fitWidth="172.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../picture/people.png" />
                </image>
             </ImageView>
-            <Circle fill="#f0ece900" layoutX="532.0" layoutY="247.0" radius="71.0" stroke="#ef775f" strokeType="INSIDE" strokeWidth="4.0" />
+            <Circle fill="#f0ece900" layoutX="505.0" layoutY="246.0" radius="71.0" stroke="#ef775f" strokeType="INSIDE" strokeWidth="4.0" />
             <CubicCurve controlX1="-50.0" controlX2="33.666656494140625" controlY1="-100.0" controlY2="-129.33334350585938" endX="135.33334350585938" endY="-143.33334350585938" fill="#1f93ff00" layoutX="325.0" layoutY="252.0" startX="-150.0" stroke="BLACK" />
-            <Text fill="#ef775f" layoutX="505.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="認證">
+            <Text fill="#ef775f" layoutX="476.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="認證">
                <font>
                   <Font name="System Bold" size="29.0" />
                </font>
@@ -67,17 +67,17 @@
                   <Font name="System Bold" size="29.0" />
                </font>
             </Text>
-            <Button layoutX="259.0" layoutY="253.0" mnemonicParsing="false" text="確定" textFill="#b7a45f">
+            <Button layoutX="206.0" layoutY="253.0" mnemonicParsing="false" text="下一頁" textFill="#b7a45f">
                <font>
-                  <Font name="System Bold" size="22.0" />
+                  <Font name="System Bold" size="17.0" />
                </font>
             </Button>
-            <Text fill="#ef775f" layoutX="491.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="神射手">
+            <Text fill="#ef775f" layoutX="462.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="神射手">
                <font>
                   <Font name="System Bold" size="29.0" />
                </font>
             </Text>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8e3a9" height="22.0" layoutX="-33.0" layoutY="322.0" stroke="TRANSPARENT" strokeType="INSIDE" width="652.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8e3a9" height="33.0" layoutX="-32.0" layoutY="325.0" stroke="TRANSPARENT" strokeType="INSIDE" width="652.0" />
             <CubicCurve controlX1="-30.333328247070312" controlX2="8.999984741210938" controlY1="3.0000152587890625" controlY2="-26.999984741210938" endX="63.00001525878906" endY="-64.33333587646484" fill="#1f93ff00" layoutX="180.0" layoutY="167.0" startX="-30.333328247070312" startY="74.66665649414062" stroke="BLACK" />
             <Circle fill="#a8b4be" layoutX="267.0" layoutY="104.0" radius="11.0" stroke="TRANSPARENT" strokeType="INSIDE" />
             <Line endX="-20.666675567626953" endY="44.333343505859375" layoutX="71.0" layoutY="95.0" startX="-42.707115173339844" startY="12.333343505859375" />
@@ -120,11 +120,16 @@
                   <Image url="@../picture/planeBump.png" />
                </image>
             </ImageView>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="31.0" layoutY="24.0" stroke="TRANSPARENT" strokeType="INSIDE" width="93.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="150.0" layoutY="24.0" stroke="TRANSPARENT" strokeType="INSIDE" width="93.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="274.0" layoutY="24.0" stroke="TRANSPARENT" strokeType="INSIDE" width="93.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="388.0" layoutY="24.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="505.0" layoutY="24.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="17.0" layoutY="24.0" stroke="TRANSPARENT" strokeType="INSIDE" width="93.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="127.0" layoutY="24.0" stroke="TRANSPARENT" strokeType="INSIDE" width="93.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="243.0" layoutY="24.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="364.0" layoutY="24.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="491.0" layoutY="24.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
+            <Button layoutX="307.0" layoutY="253.0" mnemonicParsing="false" text="上一頁" textFill="#b7a45f">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
       </children>
     </AnchorPane>
   </children>

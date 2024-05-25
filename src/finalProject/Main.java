@@ -1,4 +1,4 @@
-package assignment;
+package finalProject;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +12,7 @@ public class Main extends Application {
         try {
             // 加載 FXML
 	        FXMLLoader loader = new FXMLLoader();
-	        loader.setLocation(getClass().getResource("./FXML/First.fxml"));
+	        loader.setLocation(getClass().getResource("./FXML/Waiting.fxml"));
 	        Parent root = loader.load();
             
             // 配置 Stage

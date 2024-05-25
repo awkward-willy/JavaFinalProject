@@ -1,4 +1,4 @@
-package assignment.Controller;
+package finalProject.Controller;
 
 import javafx.event.ActionEvent;
 import java.io.IOException;
