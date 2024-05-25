@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalProject.Controller.GamePageController">
+  <children>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8e3a9" height="350.0" stroke="TRANSPARENT" strokeType="INSIDE" width="600.0" />
+            <Text layoutX="33.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="決定神射手的時刻到ㄌ...">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="63.0" fitWidth="179.0" layoutX="115.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/enemy.png" />
+               </image>
+            </ImageView>
+            <Circle fill="#ffb81f00" layoutX="195.0" layoutY="312.0" radius="30.0" stroke="#ed0909" strokeType="INSIDE" />
+            <Text fill="#ed0909" layoutX="181.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="敵" wrappingWidth="29.22222900390625">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="63.0" fitWidth="179.0" layoutX="405.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/enemy.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4c063" height="6.0" layoutX="455.0" layoutY="45.0" stroke="TRANSPARENT" strokeType="INSIDE" width="108.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4c063" height="6.0" layoutX="314.0" layoutY="45.0" stroke="TRANSPARENT" strokeType="INSIDE" width="119.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4c063" height="6.0" layoutX="179.0" layoutY="45.0" stroke="TRANSPARENT" strokeType="INSIDE" width="119.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4c063" height="6.0" layoutX="33.0" layoutY="45.0" stroke="TRANSPARENT" strokeType="INSIDE" width="119.0" />
+            <ImageView fitHeight="36.0" fitWidth="90.0" layoutX="530.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/gun.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="90.0" layoutX="491.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/gun.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="90.0" layoutX="452.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/gun.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="enemy" layoutX="58.0" layoutY="74.0" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="enemy1" layoutX="355.0" layoutY="75.0" prefHeight="200.0" prefWidth="200.0" />
+            <Circle fill="#ffb81f00" layoutX="488.0" layoutY="312.0" radius="30.0" stroke="#ed0909" strokeType="INSIDE" />
+            <Text fill="#ed0909" layoutX="473.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="敵" wrappingWidth="29.22222900390625">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+  </children>
+</VBox>

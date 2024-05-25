@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalProject.Controller.WaitingPageController">
+  <children>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8e3a9" height="355.0" layoutY="3.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="8.0" width="605.0" />
+            <ImageView fitHeight="223.0" fitWidth="149.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/bucket.png" />
+               </image>
+            </ImageView>
+            <Circle fill="#f3f8fd" layoutX="330.0" layoutY="177.0" radius="132.0" stroke="#8b7d7da1" strokeType="INSIDE" strokeWidth="4.0" />
+            <Text fill="#8b7d7d" layoutX="214.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="正在等待其他玩家">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8b7d7d" height="2.0" layoutX="230.0" layoutY="210.0" stroke="#8b7d7d00" strokeType="INSIDE" width="200.0" />
+            <Line endX="25.0" endY="40.333343505859375" layoutX="558.0" layoutY="137.0" startX="4.66668701171875" startY="77.00001525878906" />
+            <Line endX="48.999969482421875" endY="133.6666717529297" layoutX="457.0" layoutY="83.0" startX="16.999969482421875" startY="102.33332824707031" />
+            <Text fill="#8b7d7d" layoutX="126.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="不要丟嘞">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="123.0" fitWidth="137.0" layoutX="476.0" layoutY="220.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/peopleWithBump.png" />
+               </image>
+            </ImageView>
+            <Text fill="#8b7d7d" layoutX="481.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="丟砲彈環節">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Line endX="49.333343505859375" endY="64.66667175292969" layoutX="112.0" layoutY="65.0" startX="8.0" startY="64.66667175292969" />
+            <Line endX="46.0" endY="51.0" layoutX="93.0" layoutY="21.0" startX="17.66668701171875" startY="72.33334350585938" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d0a06c" height="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="605.0" />
+            <ImageView fitHeight="114.0" fitWidth="139.0" layoutX="27.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/planeBump.png" />
+               </image>
+            </ImageView>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
