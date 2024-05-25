@@ -10,9 +10,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class RulePageController {
-    @FXML
-    public void goToPreviousPage(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/First.fxml"));
+	@FXML
+	private void goToFirst (ActionEvent event) throws IOException {
+		   FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/First.fxml"));
+	       changePage(loader, event);
+	}
+	
+    public void changePage(FXMLLoader loader, ActionEvent event) throws IOException {
         Parent root = loader.load();
         Scene scene = new Scene(root);
         // 取得上一個頁面創建的stage並將其中的scene替換成更改後的scene
@@ -20,5 +24,5 @@ public class RulePageController {
         stage.setScene(scene);
         // 顯示頁面
         stage.show();
-    }
+   }
 }
