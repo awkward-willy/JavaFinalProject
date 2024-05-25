@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="320.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalProject.Controller.RulePageController">
+  <children>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Circle fill="#f0ece900" layoutX="511.0" layoutY="230.0" radius="67.0" stroke="#ef775f" strokeType="INSIDE" strokeWidth="4.0" />
+            <CubicCurve controlX1="-39.666656494140625" controlX2="40.333343505859375" controlY1="-93.33332061767578" controlY2="-123.85938262939453" endX="150.00003051757812" endY="-143.33331298828125" fill="#1f93ff00" layoutX="302.0" layoutY="212.0" startX="-150.0" stroke="BLACK" />
+            <Text fill="#ef775f" layoutX="479.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="認證">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8e3a9" height="277.0" layoutX="187.0" layoutY="37.0" stroke="#c7bf7300" strokeMiterLimit="8.0" strokeType="INSIDE" strokeWidth="7.0" width="230.0" />
+            <Text fill="#b7a45f" layoutX="224.0" layoutY="80.0" stroke="#4c6191" strokeWidth="0.0" text="遊戲規則" textAlignment="CENTER" wrappingWidth="172.3018798828125">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Text>
+            <Button fx:id="returnToPrevious" layoutX="243.0" layoutY="262.0" mnemonicParsing="false" onAction="#goToPreviousPage" text="返回前頁" textFill="#b7a45f">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Text fill="#ef775f" layoutX="465.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="神射手">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="165.0" fitWidth="150.0" layoutX="4.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/gun.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="142.0" fitWidth="134.0" layoutX="446.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/planeBump.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8e3a9" height="25.0" layoutY="324.0" stroke="TRANSPARENT" strokeType="INSIDE" width="605.0" />
+            <ImageView fitHeight="167.0" fitWidth="150.0" layoutX="13.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/people.png" />
+               </image>
+            </ImageView>
+            <CubicCurve controlX1="-19.333328247070312" controlX2="-3.0000152587890625" controlY1="48.33332824707031" controlY2="20.333335876464844" endX="21.333328247070312" endY="11.000022888183594" fill="#1f93ff00" layoutX="167.0" layoutY="99.0" startX="-19.333328247070312" startY="79.00001525878906" stroke="BLACK" />
+            <Circle fill="#a8b4be" layoutX="215.0" layoutY="98.0" radius="15.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Line endX="-33.00000762939453" endY="48.333335876464844" layoutX="102.0" layoutY="59.0" startX="-51.0000114440918" startY="21.66667938232422" />
+            <Line endX="-32.33332061767578" endY="54.000022888183594" layoutX="138.0" layoutY="52.0" startX="-15.666664123535156" startY="24.000022888183594" />
+            <Text fill="#b7a45f" layoutX="2.0" layoutY="74.0" stroke="#4c6191" strokeWidth="0.0" text="納命來" textAlignment="CENTER" wrappingWidth="172.3018798828125">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="9.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="131.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="247.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="362.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="479.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
