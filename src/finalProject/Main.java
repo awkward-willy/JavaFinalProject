@@ -12,7 +12,7 @@ public class Main extends Application {
         try {
             // 加載 FXML
 	        FXMLLoader loader = new FXMLLoader();
-	        loader.setLocation(getClass().getResource("./FXML/Waiting.fxml"));
+	        loader.setLocation(getClass().getResource("./FXML/Game.fxml"));
 	        Parent root = loader.load();
             
             // 配置 Stage
