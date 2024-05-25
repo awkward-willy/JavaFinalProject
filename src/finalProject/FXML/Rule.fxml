@@ -61,7 +61,7 @@
                   <Font name="System Bold" size="32.0" />
                </font>
             </Text>
-            <Button fx:id="returnToPrevious" layoutX="243.0" layoutY="262.0" mnemonicParsing="false" onAction="#goToPreviousPage" text="返回前頁" textFill="#b7a45f">
+            <Button fx:id="returnToPrevious" layoutX="243.0" layoutY="262.0" mnemonicParsing="false" onAction="#goToFirst" text="返回前頁" textFill="#b7a45f">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>

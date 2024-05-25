@@ -67,7 +67,7 @@
                   <Font name="System Bold" size="29.0" />
                </font>
             </Text>
-            <Button layoutX="206.0" layoutY="253.0" mnemonicParsing="false" text="下一頁" textFill="#b7a45f">
+            <Button fx:id="goToRoom" layoutX="206.0" layoutY="253.0" mnemonicParsing="false" onAction="#goToRoom" text="下一頁" textFill="#b7a45f">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
@@ -88,22 +88,22 @@
                </font>
             </Text>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="213.0" layoutY="111.0" stroke="TRANSPARENT" strokeType="INSIDE" width="150.0" />
-            <CheckBox layoutX="225.0" layoutY="136.0" mnemonicParsing="false" text="單機" textFill="#b7a45f">
+            <CheckBox fx:id="Standalone" layoutX="225.0" layoutY="136.0" mnemonicParsing="false" onAction="#choosemode" text="單機" textFill="#b7a45f">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </CheckBox>
-            <CheckBox layoutX="315.0" layoutY="136.0" mnemonicParsing="false" text="連線" textFill="#b7a45f">
+            <CheckBox fx:id="Connect" layoutX="315.0" layoutY="136.0" mnemonicParsing="false" onAction="#choosemode" text="連線" textFill="#b7a45f">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </CheckBox>
-            <CheckBox layoutX="221.0" layoutY="204.0" mnemonicParsing="false" text="難" textFill="#b7a45f">
+            <CheckBox fx:id="Difficult" layoutX="221.0" layoutY="204.0" mnemonicParsing="false" onAction="#choosedifficulty" text="難" textFill="#b7a45f">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </CheckBox>
-            <CheckBox layoutX="316.0" layoutY="204.0" mnemonicParsing="false" text="易" textFill="#b7a45f">
+            <CheckBox fx:id="Easy" layoutX="316.0" layoutY="204.0" mnemonicParsing="false" onAction="#choosedifficulty" text="易" textFill="#b7a45f">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -125,7 +125,7 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="243.0" layoutY="24.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="364.0" layoutY="24.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="491.0" layoutY="24.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
-            <Button layoutX="307.0" layoutY="253.0" mnemonicParsing="false" text="上一頁" textFill="#b7a45f">
+            <Button fx:id="goToFirst" layoutX="307.0" layoutY="253.0" mnemonicParsing="false" onAction="#goToFirst" text="上一頁" textFill="#b7a45f">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
