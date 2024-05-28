@@ -15,20 +15,20 @@ public class FirstPageController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/Rule.fxml"));
         changePage(loader, event);
     }
-    
+
     @FXML
     public void goToChoosePage(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/Choose.fxml"));
         changePage(loader, event);
     }
-    
+
     public void changePage(FXMLLoader loader, ActionEvent event) throws IOException {
-    	 Parent root = loader.load();
-         Scene scene = new Scene(root);
-         // 取得上一個頁面創建的stage並將其中的scene替換成更改後的scene
-         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-         stage.setScene(scene);
-         // 顯示頁面
-         stage.show();
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        // 取得上一個頁面創建的stage並將其中的scene替換成更改後的scene
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        // 顯示頁面
+        stage.show();
     }
 }

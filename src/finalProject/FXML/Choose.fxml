@@ -67,7 +67,7 @@
                   <Font name="System Bold" size="29.0" />
                </font>
             </Text>
-            <Button fx:id="goToRoom" layoutX="206.0" layoutY="253.0" mnemonicParsing="false" onAction="#goToRoom" text="下一頁" textFill="#b7a45f">
+            <Button fx:id="goToRoom" layoutX="307.0" layoutY="253.0" mnemonicParsing="false" onAction="#goToRoom" text="下一頁" textFill="#b7a45f">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
@@ -125,7 +125,7 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="243.0" layoutY="24.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="364.0" layoutY="24.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="491.0" layoutY="24.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
-            <Button fx:id="goToFirst" layoutX="307.0" layoutY="253.0" mnemonicParsing="false" onAction="#goToFirst" text="上一頁" textFill="#b7a45f">
+            <Button fx:id="goToFirst" layoutX="207.0" layoutY="253.0" mnemonicParsing="false" onAction="#goToFirst" text="上一頁" textFill="#b7a45f">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

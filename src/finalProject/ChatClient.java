@@ -12,9 +12,9 @@ public class ChatClient {
     private static volatile boolean running = true;
 
     public ChatClient() {
-    	System.out.print("YA!");
+        System.out.println("ChatClient initialized.");
     }
-    
+
     public static void main(String[] args) {
         try (Socket socket = new Socket(SERVER_ADDR, SERVER_PORT)) {
             BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -47,7 +47,7 @@ public class ChatClient {
                     }
                 } catch (Exception e) {
                     if (running) {
-                        e.printStackTrace();
+                        System.out.println("Server disconnected");
                     }
                 }
             });
@@ -73,7 +73,7 @@ public class ChatClient {
             }
             scanner.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Server disconnected");
         }
 
     }

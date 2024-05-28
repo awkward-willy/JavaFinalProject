@@ -11,10 +11,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             // 加載 FXML
-	        FXMLLoader loader = new FXMLLoader();
-	        loader.setLocation(getClass().getResource("./FXML/Game.fxml"));
-	        Parent root = loader.load();
-            
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("./FXML/First.fxml"));
+            Parent root = loader.load();
+
             // 配置 Stage
             primaryStage.setTitle("JAVA FINAL PROJECT");
             primaryStage.setScene(new Scene(root));
@@ -25,7 +25,7 @@ public class Main extends Application {
             e.printStackTrace();
         }
     }
-    
+
     public static void main(String[] args) {
         launch(args);
     }

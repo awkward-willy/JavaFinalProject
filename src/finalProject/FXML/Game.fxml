@@ -58,7 +58,7 @@
                </image>
             </ImageView>
             <Circle fill="#ffb81f00" layoutX="195.0" layoutY="312.0" radius="30.0" stroke="#ed0909" strokeType="INSIDE" />
-            <Text fill="#ed0909" layoutX="181.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="敵" wrappingWidth="29.22222900390625">
+            <Text fill="#ed0909" layoutX="181.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="我" wrappingWidth="29.22222900390625">
                <font>
                   <Font name="System Bold" size="26.0" />
                </font>
@@ -87,8 +87,8 @@
                   <Image url="@../picture/gun.png" />
                </image>
             </ImageView>
-            <Pane fx:id="enemy" layoutX="58.0" layoutY="74.0" prefHeight="200.0" prefWidth="200.0" />
-            <Pane fx:id="enemy1" layoutX="355.0" layoutY="75.0" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="me" layoutX="58.0" layoutY="74.0" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="enemy" layoutX="355.0" layoutY="74.0" prefHeight="200.0" prefWidth="200.0" />
             <Circle fill="#ffb81f00" layoutX="488.0" layoutY="312.0" radius="30.0" stroke="#ed0909" strokeType="INSIDE" />
             <Text fill="#ed0909" layoutX="473.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="敵" wrappingWidth="29.22222900390625">
                <font>
