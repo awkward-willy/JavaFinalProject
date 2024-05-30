@@ -5,7 +5,7 @@ import finalProject.Socket.Client;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
 
-public class GamePageController {
+public class GamePageController extends BaseController {
   private Client client;
 
   @FXML
@@ -14,25 +14,21 @@ public class GamePageController {
   @FXML
   private Pane me;
 
-  private GameApp myBoardApp;
-  private GameApp enemyBoardApp;
+  private GameApp gameApp;
 
   @FXML
   public void initialize() {
-    myBoardApp = new GameApp();
-    enemyBoardApp = new GameApp();
-    myBoardApp.initialize(me);
-    enemyBoardApp.initialize(enemy);
+    gameApp = new GameApp();
+    gameApp.initialize(me, enemy, true); // 允許互動
   }
 
   public void setClient(Client client) {
     this.client = client;
+    gameApp.setClient(client);
     startGame();
   }
 
   private void startGame() {
-    myBoardApp.setClient(client);
-    enemyBoardApp.setClient(client);
-    client.setGameApp(myBoardApp, enemyBoardApp);
+    client.setGameApp(gameApp);
   }
 }

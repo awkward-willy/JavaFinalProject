@@ -4,15 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.CheckBox;
-import javafx.stage.Stage;
 
-public class ChoosePageController {
+public class ChoosePageController extends BaseController {
 	@FXML
 	private CheckBox Standalone;
 	@FXML
@@ -49,13 +43,9 @@ public class ChoosePageController {
 	@FXML
 	private void goToRoom(ActionEvent event) throws IOException {
 		// 先檢查是否有選擇模式和難度
-		if (mode == 0 || difficulty == 0) {
-			// 跳出警告視窗
-			Alert alert = new Alert(AlertType.ERROR);
-			alert.setTitle("錯誤");
-			alert.setHeaderText(null);
-			alert.setContentText("請選擇模式和難度");
-			alert.showAndWait();
+		if (!Standalone.isSelected() && !Connect.isSelected() ||
+				!Difficult.isSelected() && !Easy.isSelected()) {
+			showError("錯誤", "請選擇模式和難度");
 			return;
 		}
 
@@ -75,15 +65,5 @@ public class ChoosePageController {
 		Easy.setSelected(false);
 		mode = 0;
 		difficulty = 0;
-	}
-
-	public void changePage(FXMLLoader loader, ActionEvent event) throws IOException {
-		Parent root = loader.load();
-		Scene scene = new Scene(root);
-		// 取得上一個頁面創建的stage並將其中的scene替換成更改後的scene
-		Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-		stage.setScene(scene);
-		// 顯示頁面
-		stage.show();
 	}
 }

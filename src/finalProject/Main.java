@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.input.KeyEvent;
 
 public class Main extends Application {
     @Override
@@ -18,6 +19,26 @@ public class Main extends Application {
             // 配置 Stage
             primaryStage.setTitle("JAVA FINAL PROJECT");
             primaryStage.setScene(new Scene(root));
+            primaryStage.setResizable(false);
+
+            // 播放背景音樂
+            MusicPlayer.playBackgroundMusic();
+
+            // primaryStage 按下 M 要 toggle 音樂播放
+            primaryStage.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
+                switch (event.getCode()) {
+                    case M:
+                        MusicPlayer.toggleBackgroundMusic();
+                        break;
+                    default:
+                        break;
+                }
+            });
+
+            // 關閉視窗時自動停止音樂
+            primaryStage.setOnCloseRequest(event -> {
+                MusicPlayer.stopBackgroundMusic();
+            });
 
             // 顯示 Stage
             primaryStage.show();

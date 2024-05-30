@@ -11,14 +11,12 @@ public class Client {
 	private static final String SERVER_ADDR = "127.0.0.1";
 	private static final int SERVER_PORT = 8000;
 	private static volatile boolean running = true;
-	private boolean startGame = false;
+	private int startGame = 0;
 	private String message = "";
-	private GameApp myBoardApp;
-	private GameApp enemyBoardApp;
+	private GameApp gameApp;
 
-	public void setGameApp(GameApp myBoardApp, GameApp enemyBoardApp) {
-		this.myBoardApp = myBoardApp;
-		this.enemyBoardApp = enemyBoardApp;
+	public void setGameApp(GameApp gameApp) {
+		this.gameApp = gameApp;
 	}
 
 	public void closeConnection() {
@@ -26,7 +24,7 @@ public class Client {
 	}
 
 	public Boolean testServerAvailable() throws RuntimeException {
-		// 不用開 Thread，直接建立 Socket 連線，如果連線失敗，則伺服器不可用
+		// 先不用開 Thread，直接建立 Socket 連線，如果連線失敗，則伺服器不可用
 		try (Socket socket = new Socket(SERVER_ADDR, SERVER_PORT)) {
 			System.out.println("Server is available");
 			return true;
@@ -51,13 +49,16 @@ public class Client {
 					String serverMessage = reader.readLine();
 					if (!serverMessage.equals("Room is full. Try again...")) {
 						if (serverMessage.equals("Start game!")) {
-							setStartGame(true);
+							setStartGame(1);
 						}
 						System.out.println(serverMessage);
 						EnterRoom = false;
 						break;
 					} else {
 						System.out.println(serverMessage);
+						setStartGame(-1);
+						closeConnection();
+						break;
 					}
 				}
 
@@ -72,11 +73,10 @@ public class Client {
 								socket.close();
 								break;
 							} else if (serverMessage.equals("Start game!")) {
-								setStartGame(true);
+								setStartGame(1);
 								System.out.println(serverMessage);
 							} else if (serverMessage.equals("All planes placed.")) {
-								myBoardApp.setEnemyPlaced(true);
-								enemyBoardApp.setAllPlanesPlaced(true);
+								gameApp.toggleOverlay();
 								System.out.println(serverMessage);
 							} else {
 								System.out.println(serverMessage);
@@ -127,11 +127,13 @@ public class Client {
 		return message;
 	}
 
-	public boolean getStartGame() {
+	public int getStartGame() {
+		// 1 表示遊戲開始，0 表示遊戲未開始，-1 表示房間已滿
 		return startGame;
 	}
 
-	public void setStartGame(boolean _startGame) {
+	public void setStartGame(int _startGame) {
+		// 1 表示遊戲開始，0 表示遊戲未開始，-1 表示房間已滿
 		startGame = _startGame;
 	}
 
