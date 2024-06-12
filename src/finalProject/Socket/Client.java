@@ -5,15 +5,25 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
 
-import finalProject.GameApp;
+import finalProject.Game.GameApp;
+import javafx.application.Platform;
 
 public class Client {
 	private static final String SERVER_ADDR = "127.0.0.1";
 	private static final int SERVER_PORT = 8000;
 	private static volatile boolean running = true;
 	private int startGame = 0;
+	private int player = 0;
 	private String message = "";
 	private GameApp gameApp;
+
+	public void setPlayer(int player) {
+		this.player = player;
+	}
+
+	public int getPlayer() {
+		return player;
+	}
 
 	public void setGameApp(GameApp gameApp) {
 		this.gameApp = gameApp;
@@ -48,8 +58,9 @@ public class Client {
 					out.flush();
 					String serverMessage = reader.readLine();
 					if (!serverMessage.equals("Room is full. Try again...")) {
-						if (serverMessage.equals("Start game!")) {
+						if (serverMessage.startsWith("Start game!")) {
 							setStartGame(1);
+							setPlayer(serverMessage.contains("player 1") ? 1 : 2);
 						}
 						System.out.println(serverMessage);
 						EnterRoom = false;
@@ -72,20 +83,45 @@ public class Client {
 								running = false;
 								socket.close();
 								break;
-							} else if (serverMessage.equals("Start game!")) {
+							} else if (serverMessage.startsWith("Start game!")) {
 								setStartGame(1);
+								setPlayer(serverMessage.contains("player 1") ? 1 : 2);
 								System.out.println(serverMessage);
-							} else if (serverMessage.equals("All planes placed.")) {
-								gameApp.toggleOverlay();
+							} else if (serverMessage.startsWith("All planes placed. Position: ")) {
+								// 把訊息中 Position: 之後的部分取出來
+								// 因為 Position: 字串長度 10，所以取出的部分就是飛機位置的字串
+								String position = serverMessage.substring(serverMessage.indexOf("Position: ") + 10);
+								if (position.endsWith(",")) {
+									position = position.substring(0, position.length() - 1);
+								}
+								// 把 position 字串轉換成 boolean[][] 陣列
+								boolean[][] enemyAnswer = new boolean[10][10];
+								String[] rows = position.split(",");
+								for (int i = 0; i < 10; i++) {
+									for (int j = 0; j < 10; j++) {
+										enemyAnswer[i][j] = rows[i].charAt(j) == '1';
+									}
+								}
+								Platform.runLater(() -> {
+									gameApp.setEnemyAnswer(enemyAnswer);
+									gameApp.setEnemyPlaced(true);
+									gameApp.checkIfBothPlayersReady();
+								});
+							} else if (serverMessage.startsWith("Bomb: ")) {
+								// 切分出裡面的座標
+								String[] bombPosition = serverMessage.substring(6).split(",");
+								int x = Integer.parseInt(bombPosition[0]);
+								int y = Integer.parseInt(bombPosition[1]);
+								Platform.runLater(() -> {
+									gameApp.receiveBombing(x, y);
+								});
 								System.out.println(serverMessage);
 							} else {
-								System.out.println(serverMessage);
+								System.out.println("Not handled message: " + serverMessage);
 							}
 						}
 					} catch (Exception e) {
-						if (running) {
-							System.out.println("Server disconnected");
-						}
+						e.printStackTrace();
 					}
 				});
 				readerThread.start();
@@ -101,7 +137,7 @@ public class Client {
 						break;
 					}
 					if (socket.isClosed()) {
-						System.out.println("Server disconnected");
+						running = false;
 						break;
 					}
 					if (!message.equals("")) {
@@ -111,12 +147,17 @@ public class Client {
 					}
 				}
 			} catch (Exception e) {
-				System.out.println("Server disconnected");
+				if (e instanceof java.net.ConnectException) {
+					System.out.println("Server is not available");
+				} else {
+					e.printStackTrace();
+				}
 			} finally {
 				System.out.println("Client terminated");
 			}
 		});
 		clientThread.start();
+
 	}
 
 	public void sendMessage(String message) {
@@ -132,9 +173,9 @@ public class Client {
 		return startGame;
 	}
 
-	public void setStartGame(int _startGame) {
+	public void setStartGame(int startGame) {
 		// 1 表示遊戲開始，0 表示遊戲未開始，-1 表示房間已滿
-		startGame = _startGame;
+		this.startGame = startGame;
 	}
 
 }

@@ -33,6 +33,7 @@
 -->
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -88,7 +89,6 @@
                </image>
             </ImageView>
             <CubicCurve controlX1="-19.333328247070312" controlX2="-3.0000152587890625" controlY1="48.33332824707031" controlY2="20.333335876464844" endX="21.333328247070312" endY="11.000022888183594" fill="#1f93ff00" layoutX="167.0" layoutY="99.0" startX="-19.333328247070312" startY="79.00001525878906" stroke="BLACK" />
-            <Circle fill="#a8b4be" layoutX="215.0" layoutY="98.0" radius="15.0" stroke="TRANSPARENT" strokeType="INSIDE" />
             <Line endX="-33.00000762939453" endY="48.333335876464844" layoutX="102.0" layoutY="59.0" startX="-51.0000114440918" startY="21.66667938232422" />
             <Line endX="-32.33332061767578" endY="54.000022888183594" layoutX="138.0" layoutY="52.0" startX="-15.666664123535156" startY="24.000022888183594" />
             <Text fill="#b7a45f" layoutX="2.0" layoutY="74.0" stroke="#4c6191" strokeWidth="0.0" text="納命來" textAlignment="CENTER" wrappingWidth="172.3018798828125">
@@ -101,6 +101,12 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="247.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="362.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7a45f" height="6.0" layoutX="479.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="101.0" />
+            <TextArea editable="false" layoutX="207.0" layoutY="96.0" prefHeight="158.0" prefWidth="194.0" text="&#10;兩兩對戰，雙方可自由擺放、移動、旋轉你的飛機，讓對方無法猜中你的飛機位置吧！遊戲開始後，打中對方飛機領地會顯示黑色，否則為灰色。而率先找到所有飛機位置的人就是今日贏家&#10;&#10;快開始你們的尋飛機大戰吧！" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextArea>
+            <Circle fill="#a8b4be" layoutX="215.0" layoutY="98.0" radius="15.0" stroke="TRANSPARENT" strokeType="INSIDE" />
       </children>
     </AnchorPane>
   </children>

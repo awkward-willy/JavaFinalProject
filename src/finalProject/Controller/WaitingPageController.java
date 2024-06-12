@@ -5,8 +5,11 @@ import java.io.IOException;
 
 import finalProject.Socket.Client;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.scene.Node;
 import javafx.stage.WindowEvent;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -17,6 +20,7 @@ public class WaitingPageController extends BaseController {
     public int difficulty;
     public int roomnum;
     private volatile boolean startGame = false;
+    private int player;
 
     @FXML
     private Button GameButton;
@@ -54,7 +58,7 @@ public class WaitingPageController extends BaseController {
     @FXML
     public void goToGame(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/Game.fxml"));
-        changePage(loader, event);
+        changePage(loader, event, GamePageController.class);
     }
 
     @FXML
@@ -76,6 +80,7 @@ public class WaitingPageController extends BaseController {
                     break;
                 } else if (status == 1) {
                     startGame = true;
+                    player = client.getPlayer();
                 }
                 if (startGame) {
                     // 使用 Platform.runLater()，因目前執行緒為背景執行緒，無法直接更新 JavaFX 元件
@@ -110,5 +115,24 @@ public class WaitingPageController extends BaseController {
     @FXML
     public void initialize() {
         client = new Client();
+    }
+
+    public void changePage(FXMLLoader loader, ActionEvent event, Class<?> controllerClass) throws IOException {
+        // 載入新的 FXML 檔案
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
+        // 取得頁面的 controller
+        Object controller = loader.getController();
+        if (controllerClass.isInstance(controller)) {
+            if (controller instanceof GamePageController) {
+                ((GamePageController) controller).setClientAndPlayer(client, player);
+            }
+        } else {
+            throw new IllegalStateException("Controller type mismatch.");
+        }
     }
 }

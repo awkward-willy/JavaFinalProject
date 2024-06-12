@@ -1,4 +1,4 @@
-package finalProject;
+package finalProject.Game;
 
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -16,8 +16,22 @@ public class MusicPlayer {
                 mediaPlayer = new MediaPlayer(media);
                 mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
             }
+            mediaPlayer.setVolume(0.15);
             mediaPlayer.play();
             isPlaying = true;
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    public static void playBombMusic() {
+        try {
+            File bombMusic = new File("resources/BombMusic.mp3");
+            Media media = new Media(bombMusic.toURI().toString());
+            MediaPlayer mediaPlayer = new MediaPlayer(media);
+            mediaPlayer.setVolume(1.0);
+            mediaPlayer.play();
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
             e.printStackTrace();

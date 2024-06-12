@@ -85,7 +85,7 @@ public class Server {
 				if (roomNumber == null)
 					break;
 
-				System.out.println("Room number: " + roomNumber);
+				System.out.println("[*] Join room " + roomNumber + " from: " + clientSocket.getInetAddress());
 				rooms.computeIfAbsent(roomNumber, k -> new HashSet<>());
 
 				if (rooms.get(roomNumber).size() < 2) {
@@ -94,8 +94,9 @@ public class Server {
 						if (rooms.get(roomNumber).size() == 1) {
 							sendMessage(clientSocket, "Success! Waiting for other player...");
 						} else {
+							int num = 1;
 							for (Socket s : rooms.get(roomNumber)) {
-								sendMessage(s, "Start game!");
+								sendMessage(s, "Start game! You are player " + num++);
 							}
 						}
 						handleClientMessages(clientSocket, roomNumber);

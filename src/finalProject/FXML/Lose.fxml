@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e3eef6" height="355.0" stroke="#dee4e9" strokeType="INSIDE" width="600.0" />
+            <Line endX="87.0" endY="283.7070617675781" layoutX="145.0" layoutY="54.0" startX="-133.66665649414062" startY="-54.000003814697266" stroke="#e0dada" strokeWidth="5.0" />
+            <Line endX="85.33331298828125" endY="297.9999694824219" layoutX="194.0" layoutY="39.0" startX="-126.66665649414062" startY="-39.000003814697266" stroke="#e0dada" strokeWidth="5.0" />
+            <Line endX="63.0" endY="310.9999694824219" layoutX="271.0" layoutY="26.0" startX="-149.0" startY="-37.000003814697266" stroke="#e0dada" strokeWidth="5.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0dada" height="20.0" layoutY="337.0" stroke="#e0dada" strokeType="INSIDE" width="600.0" />
+            <ImageView fitHeight="161.0" fitWidth="228.0" layoutX="436.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/stage.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0dada" height="177.0" layoutY="95.0" stroke="#e0dada" strokeType="INSIDE" width="411.0" />
+            <ImageView fitHeight="168.0" fitWidth="161.0" layoutX="436.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/loser.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="52.0" fitWidth="57.0" layoutX="545.0" layoutY="9.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/gun.png" />
+               </image>
+            </ImageView>
+            <Circle fill="#b2bdc7" layoutX="531.0" layoutY="28.0" radius="7.0" stroke="#b2bdc7" strokeType="INSIDE" />
+            <Circle fill="#b2bdc7" layoutX="511.0" layoutY="28.0" radius="7.0" stroke="#b2bdc7" strokeType="INSIDE" />
+            <Circle fill="#b2bdc7" layoutX="489.0" layoutY="28.0" radius="7.0" stroke="#b2bdc7" strokeType="INSIDE" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="36.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="129.0" fitWidth="374.0" layoutX="42.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../picture/lose_word.png" />
+               </image>
+            </ImageView>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
