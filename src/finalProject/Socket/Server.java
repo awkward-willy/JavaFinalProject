@@ -126,6 +126,7 @@ public class Server {
 	}
 
 	private static void handleClientMessages(Socket clientSocket, String roomNumber) {
+		// 透過 BufferedReader 來讀取 clientSocket 的 InputStream
 		try (BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
 			String message;
 			while ((message = reader.readLine()) != null) {
@@ -148,6 +149,7 @@ public class Server {
 
 	private static void sendMessage(Socket socket, String message) {
 		try {
+			// 將 message 寫入到 socket 的 OutputStream 中並清空緩衝區
 			OutputStream out = socket.getOutputStream();
 			out.write((message + "\n").getBytes());
 			out.flush();

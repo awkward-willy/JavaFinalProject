@@ -15,7 +15,9 @@ public class ChoosePageController extends BaseController {
 	private CheckBox Difficult;
 	@FXML
 	private CheckBox Easy;
+
 	int mode;
+	
 	int difficulty;
 
 	@FXML

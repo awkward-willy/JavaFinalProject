@@ -22,6 +22,7 @@ public abstract class BaseController {
         stage.show();
     }
 
+    // 顯示錯誤訊息
     public void showError(String title, String content) {
         Alert alert = new Alert(AlertType.ERROR);
         alert.setTitle(title);
